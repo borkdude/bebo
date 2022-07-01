@@ -1,0 +1,5 @@
+.cpcache
+.cache
+.shadow-cljs
+lib
+report.html

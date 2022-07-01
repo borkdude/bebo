@@ -1,0 +1,13 @@
+{:deps true
+ :builds
+ {:dbb
+  {:js-options {;; don't bundle any npm libs
+                :js-provider :import}
+   :compiler-options {:infer-externs :auto}
+   :target :esm
+   :runtime :node
+   :output-dir "lib"
+   :modules
+   {:dbb_main {:init-fn dbb.main/init}}
+   :build-hooks [(shadow.cljs.build-report/hook
+                  {:output-to "report.html"})]}}}
