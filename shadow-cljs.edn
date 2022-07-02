@@ -8,6 +8,8 @@
    :runtime :node
    :output-dir "lib"
    :modules
-   {:bebo_main {:init-fn bebo.main/init}}
+   {:bebo_core {:exports {runScript bebo.core/run-script}}
+    :bebo_main {:init-fn bebo.main/init
+                :depends-on #{:bebo_core}}}
    :build-hooks [(shadow.cljs.build-report/hook
                   {:output-to "report.html"})]}}}
