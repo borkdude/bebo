@@ -1,0 +1,7 @@
+{:tasks
+ {:requires ([babashka.fs :as fs])
+  publish {:task
+           (do (fs/delete-tree "lib")
+               (shell "npx shadow-cljs release bebo")
+               (shell "npm patch")
+               (shell "npm publish"))}}}
