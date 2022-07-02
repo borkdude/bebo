@@ -4,7 +4,8 @@
    [goog.object :as gobject]
    [sci.async :as scia]
    [sci.core :as sci]
-   [shadow.esm :as esm]))
+   [shadow.esm :as esm]
+   [babashka.cli :as cli]))
 
 (defn async-load-fn
   [{:keys [libname opts ctx ns]}]
@@ -42,8 +43,26 @@
 ;; allow printing
 (sci/alter-var-root sci/print-fn (constantly *print-fn*))
 
+(defn run-script [file]
+  (-> (if (str/starts-with? file "http")
+        (-> (js/fetch file)
+            (.then #(.text %)))
+        (js/Deno.readTextFile file))
+      (.then (fn [text]
+               (scia/eval-string* ctx text)))))
+
+(defn run-script* [{:keys [rest-cmds args]}]
+  (run-script (or (first rest-cmds) (first args))))
+
+(defn print-help []
+  (println "TODO"))
+
+(defn fallback [{:keys [cmds]}]
+  (if-let [file (first cmds)]
+    (run-script file)
+    (print-help)))
+
 (defn init []
-  (let [[file & _] js/Deno.args]
-    (-> (js/Deno.readTextFile file)
-        (.then (fn [text]
-                 (scia/eval-string* ctx text))))))
+  (let [args js/Deno.args]
+    (cli/dispatch [{:cmds ["run"] :fn run-script*}
+                   {:cmds [] :fn fallback}] args)))

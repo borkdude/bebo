@@ -2,5 +2,6 @@
  :aliases {:test {:extra-paths ["test"]}}
  :deps {thheller/shadow-cljs {:mvn/version "2.19.4"}
         org.babashka/sci {:git/url "https://github.com/babashka/sci"
-                          :git/sha "3d7262ce7f5103484d8a4e00a7456f3bf4aebccf"}}
+                          :git/sha "3d7262ce7f5103484d8a4e00a7456f3bf4aebccf"}
+        org.babashka/cli {:mvn/version "0.3.31"}}
  }
