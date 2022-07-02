@@ -7,7 +7,8 @@ SCI + deno experiment.
 To preserve fine-grained control per script invocation, you can use the `run.ts` script to invoke a ClojureScript (`.cljs`) file:
 
 ```
-deno run --allow-net https://cdn.jsdelivr.net/npm/bebo@0.0.6/run.ts \
+deno run --allow-net \
+         https://cdn.jsdelivr.net/npm/bebo@0.0.6/run.ts \
          https://raw.githubusercontent.com/borkdude/bebo/main/examples/server/example.cljs
 ```
 
