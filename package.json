@@ -1,6 +1,6 @@
 {
   "name": "bebo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Deno bb",
   "main": "index.js",
   "directories": {
