@@ -3,5 +3,6 @@
   publish {:task
            (do (fs/delete-tree "lib")
                (shell "npx shadow-cljs release bebo")
-               (shell "npm patch")
+               (run! fs/delete (fs/glob "lib" "*.map"))
+               (shell "npm version patch")
                (shell "npm publish"))}}}
