@@ -8,6 +8,6 @@
    :runtime :node
    :output-dir "lib"
    :modules
-   {:dbb_main {:init-fn dbb.main/init}}
+   {:dbb_main {:init-fn bebo.main/init}}
    :build-hooks [(shadow.cljs.build-report/hook
                   {:output-to "report.html"})]}}}

@@ -1,4 +1,4 @@
-(ns dbb.main
+(ns bebo.main
   (:require
    [clojure.string :as str]
    [goog.object :as gobject]

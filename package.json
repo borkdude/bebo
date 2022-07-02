@@ -1,0 +1,27 @@
+{
+  "name": "bebo",
+  "version": "0.0.1",
+  "description": "Deno bb",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borkdude/bebo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borkdude/bebo/issues"
+  },
+  "homepage": "https://github.com/borkdude/bebo#readme",
+  "files": [
+    "README.md",
+    "lib"
+  ]
+}
