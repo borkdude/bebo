@@ -11,7 +11,7 @@ $ deno install --allow-all --name bebo https://cdn.jsdelivr.net/npm/bebo@0.0.5/l
 Then run `bebo` on a local or remote `.cljs` file:
 
 ```
-$ bebo run https://raw.githubusercontent.com/borkdude/bebo/main/examples/server/example.cljs
+$ bebo run https://raw.githubusercontent.com/borkdude/bebo/v0.0.5/examples/server/example.cljs
 Listening on http://localhost:8080/
 ```
 
