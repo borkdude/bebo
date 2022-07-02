@@ -7,4 +7,5 @@
                (run! fs/delete (fs/glob "lib" "*.map"))
                (shell "npm version patch")
                (shell "npm publish")
-               (shell "git push origin main" (str/trim (shell {:out :string} "npm show . version"))))}}}
+               (shell "git push origin main"
+                      (str/trim (:out (shell {:out :string} "npm show . version")))))}}}
