@@ -1,6 +1,8 @@
 {:tasks
  {:requires ([babashka.fs :as fs]
              [clojure.string :as str])
+  :init (do (defn current-version []
+              (str "v" (str/trim (:out (shell {:out :string} "npm show . version"))))))
   publish {:task
            (do (fs/delete-tree "lib")
                (shell "npx shadow-cljs release bebo")
@@ -8,4 +10,4 @@
                (shell "npm version patch")
                (shell "npm publish")
                (shell "git push origin main"
-                      (str/trim (:out (shell {:out :string} "npm show . version")))))}}}
+                      (current-version)))}}}
