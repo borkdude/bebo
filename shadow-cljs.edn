@@ -1,6 +1,6 @@
 {:deps true
  :builds
- {:dbb
+ {:bebo
   {:js-options {;; don't bundle any npm libs
                 :js-provider :import}
    :compiler-options {:infer-externs :auto}
@@ -8,6 +8,6 @@
    :runtime :node
    :output-dir "lib"
    :modules
-   {:dbb_main {:init-fn bebo.main/init}}
+   {:bebo_main {:init-fn bebo.main/init}}
    :build-hooks [(shadow.cljs.build-report/hook
                   {:output-to "report.html"})]}}}
