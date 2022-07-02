@@ -8,7 +8,7 @@ SCI + deno experiment.
 $ deno install --allow-all --name bebo https://cdn.jsdelivr.net/npm/bebo@0.0.5/lib/bebo_main.js
 ```
 
-Then run `bebo` on a `.cljs` local or remote file:
+Then run `bebo` on a local or remote `.cljs` file:
 
 ```
 $ bebo run https://raw.githubusercontent.com/borkdude/bebo/main/examples/server/example.cljs
