@@ -5,13 +5,13 @@ SCI + deno experiment.
 ## Install from CDN
 
 ```
-$ deno install --allow-read --allow-net --name bebo https://cdn.jsdelivr.net/npm/bebo@0.0.1/lib/bebo_main.js
+$ deno install --allow-all --name bebo https://cdn.jsdelivr.net/npm/bebo@0.0.5/lib/bebo_main.js
 ```
 
-Then run `bebo` on a `.cljs` file:
+Then run `bebo` on a `.cljs` local or remote file:
 
 ```
-$ bebo examples/server/example.cljs
+$ bebo run https://raw.githubusercontent.com/borkdude/bebo/main/examples/server/example.cljs
 Listening on http://localhost:8080/
 ```
 
