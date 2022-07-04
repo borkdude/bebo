@@ -66,8 +66,6 @@ Then:
 ./runner examples/server/example.cljs
 ```
 
-Notice that the startup time using this pre-compiled binary is much faster!
-
 ## Build and run
 
 ```
