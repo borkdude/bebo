@@ -45,7 +45,7 @@ optimization when you're done developing your application.
 
 To do this, create a `runner.js`:
 
-```
+``` javascript
 import { runScript } from 'https://cdn.jsdelivr.net/npm/bebo@0.0.6/lib/bebo_core.js'
 
 // Add all modules you are going to use within .cljs scripts. They will be bundled into the executable.
