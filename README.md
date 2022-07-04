@@ -1,6 +1,9 @@
 # bebo
 
-SCI + deno experiment.
+Deno is a modern runtime for JavaScript and TypeScript. Go to the [deno](https://deno.land/) website to learn more.
+
+This is a tool to run Clojure scripts on deno using
+[SCI](https://github.com/babashka/sci).
 
 ## Install from CDN
 
